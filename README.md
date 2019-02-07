@@ -8,7 +8,7 @@ The following are the key commands used in this example:
 
 - mkdir ~/dev/data/pgsql-test
 - docker run --name pgsql-test -v ~/dev/data/pgsql-test:/var/lib/postgresql/data -e POSTGRES_PASSWORD=test -d postgres
-- docker run -it --rm --link pgsql-test:pg --name pg-tools -v /Users/s.thompson/dev/src/github.com/stuartthompson/pgsqlscripttest:/scripts postgres psql -h pg -U postgres
+- docker run -it --rm --link pgsql-test:pg --name pg-tools -v ~/dev/src/github.com/stuartthompson/pgsqlscripttest:/scripts postgres psql -h pg -U postgres
 
 ## Example Walkthrough
 
