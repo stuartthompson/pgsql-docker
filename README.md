@@ -7,7 +7,7 @@ This repository is used to demonstrate how to run PostgreSql in a docker contain
 The following are the key commands used in this example:
 
 - mkdir ~/dev/data/pgsql-docker
-- docker run --name pgsql-compute -v ~/dev/data/pgsql-docker:/var/lib/postgresql/data -e POSTGRES_PASSWORD=test -d postgres
+- docker run --name pg-compute -v ~/dev/data/pgsql-docker:/var/lib/postgresql/data -e POSTGRES_PASSWORD=test -d postgres
 - docker run -it --rm --link pg-compute:pg-compute --name pg-tools -v ~/dev/src/github.com/stuartthompson/pgsql-docker:/scripts postgres psql -h pg-compute -U postgres
 - \i /scripts/create-schema.sql
 
@@ -23,7 +23,7 @@ mkdir ~/dev/data/pgsql-docker
 ### Run a PostgreSql Compute Container
 
 This command runs PostgreSql in a Docker container:
-docker run --name pgsql-compute -v ~/dev/data/pgsql-docker:/var/lib/postgresql/data -e POSTGRES_PASSWORD=test -d postgres
+docker run --name pg-compute -v ~/dev/data/pgsql-docker:/var/lib/postgresql/data -e POSTGRES_PASSWORD=test -d postgres
 
 ### Run psql Client Tools in a Container
 
